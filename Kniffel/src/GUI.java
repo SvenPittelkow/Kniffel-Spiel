@@ -26,16 +26,28 @@ public class GUI {
 		h2.setBounds(start.getWidth()/2-200, 30, 300, 20);
 		
 		final JTextField name1 = new JTextField();
-		name1.setBounds(300, 40, 100, 20);
+		name1.setBounds(300, 60, 400, 20);
 		
 		final JTextField name2 = new JTextField();
-		name2.setBounds(300, 60, 100, 20);
+		name2.setBounds(300, 80, 400, 20);
 		
 		final JTextField name3 = new JTextField();
-		name3.setBounds(300, 80, 100, 20);
+		name3.setBounds(300, 100, 400, 20);
 		
 		final JTextField name4 = new JTextField();
-		name4.setBounds(300, 100, 100, 20);
+		name4.setBounds(300, 120, 400, 20);
+		
+		final JTextField name5 = new JTextField();
+		name5.setBounds(300, 140, 400, 20);
+		
+		final JTextField name6 = new JTextField();
+		name6.setBounds(300, 160, 400, 20);
+		
+		final JTextField name7 = new JTextField();
+		name7.setBounds(300, 180, 400, 20);
+		
+		final JTextField name8 = new JTextField();
+		name8.setBounds(300, 200, 400, 20);
 		
 		JButton regeln = new JButton("Regeln");
 		regeln.setBounds(start.getWidth()-120, start.getHeight()-140, 100, 100);
@@ -47,6 +59,10 @@ public class GUI {
 		start.add(name2);
 		start.add(name3);
 		start.add(name4);
+		start.add(name5);
+		start.add(name6);
+		start.add(name7);
+		start.add(name8);
 		start.add(regeln);
 		start.setVisible(true);
 		
