@@ -6,8 +6,7 @@ import javax.swing.*;
 
 public class GUI {
 	public JFrame start = new JFrame();
-	public JFrame regeln = new JFrame();
-	public ArrayList spieler = new ArrayList();
+	public ArrayList<String> spieler = new ArrayList<String>();
 	
 	public GUI() {
 		Start();
@@ -49,6 +48,9 @@ public class GUI {
 		final JTextField name8 = new JTextField();
 		name8.setBounds(300, 200, 400, 20);
 		
+		JButton bestätigen = new JButton("Bestätigen");
+		bestätigen.setBounds(300, 220, 120, 80);
+		
 		JButton regeln = new JButton("Regeln");
 		regeln.setBounds(start.getWidth()-120, start.getHeight()-140, 100, 100);
 		
@@ -63,9 +65,26 @@ public class GUI {
 		start.add(name6);
 		start.add(name7);
 		start.add(name8);
+		start.add(bestätigen);
 		start.add(regeln);
 		start.setVisible(true);
 		
+		
+		bestätigen.addActionListener(new ActionListener() {
+			 @Override
+	            public void actionPerformed(ActionEvent arg0) {
+	            	spieler.add(name1.getText());
+	            	spieler.add(name2.getText());
+	            	spieler.add(name3.getText());
+	            	spieler.add(name4.getText());
+	            	spieler.add(name5.getText());
+	            	spieler.add(name6.getText());
+	            	spieler.add(name7.getText());
+	            	spieler.add(name8.getText());
+	            	System.out.println(spieler.toString());
+	            	
+			 }
+		});
 		
 		regeln.addActionListener(new ActionListener() {
             @Override
@@ -78,6 +97,7 @@ public class GUI {
 	}
 
 	public void Regeln() {
+		final JFrame regeln = new JFrame();
 		regeln.setSize(1000, 500);
 		regeln.setTitle("Regeln");
 		
@@ -100,5 +120,9 @@ public class GUI {
                            regeln.dispose();
             }          
           });
-	} 
+	}
+	
+	public void Spielfeld() {
+		
+	}
 }
