@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class GUI {
-	public JFrame start = new JFrame();
+	public JFrame spielfeld = new JFrame();
+	public boolean übergabe = false;
 	public ArrayList<String> spieler = new ArrayList<String>();
 	
 	public GUI() {
@@ -13,6 +14,7 @@ public class GUI {
 	}
 	
 	public void Start() {
+		final JFrame start = new JFrame();
 		start.setTitle("Start");
 		start.setSize(1000, 500); 
 		
@@ -82,7 +84,8 @@ public class GUI {
 	            	spieler.add(name7.getText());
 	            	spieler.add(name8.getText());
 	            	System.out.println(spieler.toString());
-	            	
+	            	Spielfeld();
+	            	start.dispose();
 			 }
 		});
 		
@@ -90,7 +93,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent arg0) {
             				Regeln();  
-                           start.setVisible(false);
+                           
                            
             }          
           });
@@ -116,13 +119,17 @@ public class GUI {
 		zurück.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {  
-                           start.setVisible(true);
+                          
                            regeln.dispose();
             }          
           });
 	}
 	
 	public void Spielfeld() {
-		
+		JFrame spielfeld = new JFrame();
+		spielfeld.setTitle("Spielfeld");
+		spielfeld.setSize(1000, 500);
+		spielfeld.setVisible(true);
+		this.übergabe = true;
 	}
 }
