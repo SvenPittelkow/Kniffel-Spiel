@@ -43,7 +43,8 @@ public class GUI {
 	}
 
 	public void Regeln() {
-		regeln.setSize(1000, 500); 
+		regeln.setSize(1000, 500);
+		regeln.setTitle("Regeln");
 		
 		JLabel h1 = new JLabel();
 		h1.setText("Regeln");
