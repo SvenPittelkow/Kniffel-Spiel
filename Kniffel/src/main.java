@@ -6,9 +6,7 @@ public class main {
 	
 		GUI gui = new GUI();
 		
-		if (gui.übergabe == true) {
-			System.out.println("test");
-		}
+		
 	}
 
 }

@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.*;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ public class GUI {
 	public void Start() {
 		final JFrame start = new JFrame();
 		start.setTitle("Start");
-		start.setSize(1000, 500); 
+		start.setSize(1000, 500);
+		start.setBackground(Color.GREEN);
 		
 		JLabel h1 = new JLabel();
 		h1.setText("Herzlich wilkommen");
@@ -25,6 +27,7 @@ public class GUI {
 		JLabel h2 = new JLabel();
 		h2.setText("Bitte geben sie von allen Mitspielern den Namen ein:");
 		h2.setBounds(start.getWidth()/2-200, 30, 300, 20);
+		
 		
 		final JTextField name1 = new JTextField();
 		name1.setBounds(300, 60, 400, 20);
@@ -130,6 +133,5 @@ public class GUI {
 		spielfeld.setTitle("Spielfeld");
 		spielfeld.setSize(1000, 500);
 		spielfeld.setVisible(true);
-		this.übergabe = true;
 	}
 }
