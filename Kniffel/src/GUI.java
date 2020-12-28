@@ -18,7 +18,7 @@ public class GUI {
 		final JFrame start = new JFrame();
 		start.setTitle("Start");
 		start.setSize(1000, 500);
-		start.setBackground(Color.GREEN);
+		start.setBackground(Color.YELLOW);
 		
 		JLabel h1 = new JLabel();
 		h1.setText("Herzlich wilkommen");
@@ -89,6 +89,7 @@ public class GUI {
 	            	System.out.println(spieler.toString());
 	            	Spielfeld();
 	            	start.dispose();
+	            	System.out.println("Action am ende");
 			 }
 		});
 		
@@ -100,6 +101,7 @@ public class GUI {
                            
             }          
           });
+		System.out.println("Ich bin Start() am ende");
 	}
 
 	public void Regeln() {
@@ -126,6 +128,13 @@ public class GUI {
                            regeln.dispose();
             }          
           });
+	}
+	
+	public ArrayList getSpieler() {
+		Start();
+		System.out.println("Vor return");
+		return spieler;
+		System.out.println("nach return");
 	}
 	
 	public void Spielfeld() {
